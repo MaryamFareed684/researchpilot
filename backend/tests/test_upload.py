@@ -32,7 +32,7 @@ def test_page_numbers_are_kept():
 
 
 def test_upload_ok():
-    pdf = make_pdf(["Hello RAG", "Second page"])
+    pdf = make_pdf(["Hello RAG, this page is long enough to become a chunk.", "Second page, also long enough to become a chunk."])
     r = client.post("/upload", files={"file": ("a.pdf", pdf, "application/pdf")})
     assert r.status_code == 200
     body = r.json()
