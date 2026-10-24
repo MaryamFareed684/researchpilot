@@ -1,10 +1,11 @@
-import uuid
+import hashlib
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.concurrency import run_in_threadpool
 from pydantic import BaseModel, Field
 
-from app import embeddings, vector_store
+from app import embeddings, rag, vector_store
+from app.llm import LLMError
 from app.config import MAX_UPLOAD_BYTES, MAX_UPLOAD_MB, UPLOAD_DIR
 from app.pdf_utils import PDFError, extract_pages
 from app.pipeline import index_pages
@@ -43,11 +44,17 @@ async def upload_pdf(file: UploadFile = File(...)):
     if not pages:
         raise HTTPException(status_code=422, detail="No text found. This may be a scanned PDF (images only).")
 
-    # 5. Clean -> chunk -> embed -> store in Qdrant (heavy work, so off the main thread)
-    doc_id = uuid.uuid4().hex
-    chunks_indexed = await run_in_threadpool(index_pages, doc_id, pages)
-    if chunks_indexed == 0:
-        raise HTTPException(status_code=422, detail="No usable text chunks found in this PDF.")
+        # 5. The document id is a fingerprint of the file's content, so the same
+    #    file always gets the same id and is never indexed twice
+    doc_id = hashlib.sha256(data).hexdigest()[:32]
+    already_indexed = vector_store.count_document_chunks(doc_id)
+    if already_indexed:
+        chunks_indexed = already_indexed
+    else:
+        # Clean -> chunk -> embed -> store in Qdrant (heavy work, so off the main thread)
+        chunks_indexed = await run_in_threadpool(index_pages, doc_id, pages)
+        if chunks_indexed == 0:
+            raise HTTPException(status_code=422, detail="No usable text chunks found in this PDF.")
 
     # 6. Save the original file under the random id
     (UPLOAD_DIR / f"{doc_id}.pdf").write_bytes(data)
@@ -58,6 +65,7 @@ async def upload_pdf(file: UploadFile = File(...)):
         "total_pages": total_pages,
         "pages_with_text": len(pages),
         "chunks_indexed": chunks_indexed,
+        "already_indexed": bool(already_indexed),
         "preview": pages[0]["text"][:300],
     }
 
@@ -73,3 +81,16 @@ def search(req: SearchRequest):
     query_vector = embeddings.embed_query(req.question)
     results = vector_store.search(query_vector, top_k=req.top_k, doc_id=req.doc_id)
     return {"question": req.question, "results": results}
+
+class AskRequest(BaseModel):
+    question: str = Field(min_length=3, max_length=500)
+    top_k: int = Field(default=5, ge=1, le=10)
+    doc_id: str | None = None
+
+
+@app.post("/ask")
+def ask(req: AskRequest):
+    try:
+        return rag.answer_question(req.question, doc_id=req.doc_id, top_k=req.top_k)
+    except LLMError as exc:
+        raise HTTPException(status_code=exc.status_code, detail=exc.message)

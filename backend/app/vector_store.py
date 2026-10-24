@@ -55,3 +55,14 @@ def search(query_vector: list[float], top_k: int = 5, doc_id: str | None = None)
         with_payload=True,
     ).points
     return [{"score": round(h.score, 4), **h.payload} for h in hits]
+
+def count_document_chunks(doc_id: str) -> int:
+    """How many chunks are stored for this document (0 = not indexed yet)."""
+    result = get_client().count(
+        collection_name=COLLECTION,
+        count_filter=models.Filter(
+            must=[models.FieldCondition(key="doc_id", match=models.MatchValue(value=doc_id))]
+        ),
+        exact=True,
+    )
+    return result.count
