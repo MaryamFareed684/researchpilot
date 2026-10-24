@@ -41,11 +41,14 @@ def add_chunks(doc_id: str, chunks: list[dict], vectors: list[list[float]]) -> N
     get_client().upsert(collection_name=COLLECTION, points=points)
 
 
-def search(query_vector: list[float], top_k: int = 5, doc_id: str | None = None) -> list[dict]:
+def search(query_vector: list[float], top_k: int = 5, doc_id: str | None = None,
+           doc_ids: list[str] | None = None) -> list[dict]:
+    """Find the closest chunks. Optionally search only inside one or several documents."""
+    ids = doc_ids or ([doc_id] if doc_id else None)
     query_filter = None
-    if doc_id:
+    if ids:
         query_filter = models.Filter(
-            must=[models.FieldCondition(key="doc_id", match=models.MatchValue(value=doc_id))]
+            must=[models.FieldCondition(key="doc_id", match=models.MatchAny(any=ids))]
         )
     hits = get_client().query_points(
         collection_name=COLLECTION,
@@ -66,3 +69,30 @@ def count_document_chunks(doc_id: str) -> int:
         exact=True,
     )
     return result.count
+
+def delete_document_chunks(doc_id: str) -> None:
+    """Remove every chunk of one document from Qdrant."""
+    get_client().delete(
+        collection_name=COLLECTION,
+        points_selector=models.FilterSelector(
+            filter=models.Filter(
+                must=[models.FieldCondition(key="doc_id", match=models.MatchValue(value=doc_id))]
+            )
+        ),
+    )
+
+def first_chunks(doc_id: str, n: int = 2) -> list[dict]:
+    """The first `n` chunks of page 1 (title and abstract), without any search."""
+    points, _ = get_client().scroll(
+        collection_name=COLLECTION,
+        scroll_filter=models.Filter(
+            must=[
+                models.FieldCondition(key="doc_id", match=models.MatchValue(value=doc_id)),
+                models.FieldCondition(key="page", match=models.MatchValue(value=1)),
+            ]
+        ),
+        limit=50,
+        with_payload=True,
+    )
+    chunks = sorted((p.payload for p in points), key=lambda c: c["chunk_index"])
+    return [{"score": 1.0, **c} for c in chunks[:n]]

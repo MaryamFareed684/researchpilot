@@ -1,8 +1,10 @@
 import os
+import tempfile
 import zlib
 
 # Must be set BEFORE the app is imported: use an in-memory Qdrant for tests
 os.environ["QDRANT_PATH"] = ":memory:"
+os.environ["DB_PATH"] = os.path.join(tempfile.mkdtemp(), "test.db")
 
 import pytest
 
