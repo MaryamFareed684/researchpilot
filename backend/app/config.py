@@ -32,3 +32,10 @@ LLM_TEMPERATURE = 0.1     # low = factual, not creative
 # --- Day 4 ---
 SUMMARY_CHUNKS_PER_ASPECT = 3   # chunks retrieved for each summary question
 COMPARE_CHUNKS_PER_DOC = 4     # chunks retrieved per paper when comparing
+
+# --- Day 5: which websites may call this API from a browser (comma separated) ---
+CORS_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",")
+    if origin.strip()
+]

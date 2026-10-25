@@ -3,16 +3,25 @@ import re
 
 from fastapi import FastAPI, File, HTTPException, Request, UploadFile
 from fastapi.concurrency import run_in_threadpool
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
 from app import compare, db, embeddings, rag, summarize, vector_store
-from app.config import MAX_UPLOAD_BYTES, MAX_UPLOAD_MB, UPLOAD_DIR
+from app.config import CORS_ORIGINS, MAX_UPLOAD_BYTES, MAX_UPLOAD_MB, UPLOAD_DIR
 from app.llm import LLMError
 from app.pdf_utils import PDFError, extract_pages
 from app.pipeline import index_pages
 
 app = FastAPI(title="ResearchPilot")
+
+# Only these websites may call the API from a browser (see CORS_ORIGINS in config.py)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=CORS_ORIGINS,
+    allow_methods=["GET", "POST", "DELETE"],
+    allow_headers=["Content-Type"],
+)
 
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 db.init_db()
