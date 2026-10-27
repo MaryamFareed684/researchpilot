@@ -25,6 +25,7 @@ MIN_CHUNK_CHARS = 40
 # LLM settings
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
+SEARCH_MODE = os.getenv("SEARCH_MODE", "hybrid")  # "vector" or "hybrid"
 CONTEXT_CHUNKS = 5        # how many chunks we give the LLM
 MAX_ANSWER_TOKENS = 1500  # limit the answer length
 LLM_TEMPERATURE = 0.1     # low = factual, not creative

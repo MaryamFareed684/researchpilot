@@ -127,7 +127,7 @@ class SearchRequest(BaseModel):
 @app.post("/search")
 def search(req: SearchRequest):
     query_vector = embeddings.embed_query(req.question)
-    results = vector_store.search(query_vector, top_k=req.top_k, doc_id=req.doc_id)
+    results = rag.retrieve(req.question, query_vector, req.top_k, [req.doc_id] if req.doc_id else None)
     return {"question": req.question, "results": results}
 
 

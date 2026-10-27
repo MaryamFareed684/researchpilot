@@ -1,8 +1,10 @@
 import math
 import re
 
-from app import embeddings, llm, vector_store
-from app.config import CONTEXT_CHUNKS
+from app import embeddings, hybrid, llm, vector_store
+from app.config import CONTEXT_CHUNKS, SEARCH_MODE
+
+
 from app.prompts import NO_EVIDENCE, build_messages
 
 # matches [1], [12], and also [1, 2]
@@ -50,12 +52,20 @@ def find_uncited_sentences(answer: str) -> list[str]:
     return [text for text, cited in sentences if not cited]
 
 
-def retrieve_per_document(query_vector: list[float], doc_ids: list[str], per_doc_k: int) -> list[dict]:
+def retrieve(question: str, query_vector: list[float], top_k: int, doc_ids: list[str] | None = None) -> list[dict]:
+    """One place that decides how we search: SEARCH_MODE=vector or hybrid."""
+    if SEARCH_MODE == "hybrid":
+        return hybrid.search(question, query_vector, top_k=top_k, doc_ids=doc_ids)
+    return vector_store.search(query_vector, top_k=top_k, doc_ids=doc_ids)
+
+
+def retrieve_per_document(query_vector: list[float], doc_ids: list[str], per_doc_k: int,
+                          question: str = "") -> list[dict]:
     """The quota: take the best `per_doc_k` chunks from EACH document,
     so that no single paper can crowd out the others."""
     hits = []
     for doc_id in doc_ids:
-        hits.extend(vector_store.search(query_vector, top_k=per_doc_k, doc_ids=[doc_id]))
+        hits.extend(retrieve(question, query_vector, per_doc_k, [doc_id]))
     return hits
 
 
@@ -103,9 +113,9 @@ def answer_question(question: str, doc_id: str | None = None, doc_ids: list[str]
 
     # 1. Retrieve. With several documents, every document gets its own share.
     if ids and len(ids) > 1:
-        hits = retrieve_per_document(query_vector, ids, max(1, math.ceil(top_k / len(ids))))
+        hits = retrieve_per_document(query_vector, ids, max(1, math.ceil(top_k / len(ids))), question)
     else:
-        hits = vector_store.search(query_vector, top_k=top_k, doc_ids=ids)
+        hits = retrieve(question, query_vector, top_k, ids)
     if not hits:
         return no_evidence_result()
 
