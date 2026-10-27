@@ -1,0 +1,328 @@
+[
+  {
+    "id": "a01",
+    "question": "How many LLMs were evaluated in the main experiment on PersonalReddit?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      6,
+      7
+    ],
+    "answer_any": [
+      "9",
+      "nine"
+    ]
+  },
+  {
+    "id": "a02",
+    "question": "How many user profiles are in the PersonalReddit dataset?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      6
+    ],
+    "answer_any": [
+      "520"
+    ]
+  },
+  {
+    "id": "a03",
+    "question": "How many individual labels remain after keeping only attributes with a certainty rating of at least 3?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      6
+    ],
+    "answer_any": [
+      "1066",
+      "1,066"
+    ]
+  },
+  {
+    "id": "a04",
+    "question": "What top-1 accuracy did GPT-4 achieve across attributes on PersonalReddit?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      6,
+      7
+    ],
+    "answer_any": [
+      "85.5"
+    ]
+  },
+  {
+    "id": "a05",
+    "question": "What top-3 accuracy did GPT-4 reach?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      6
+    ],
+    "answer_any": [
+      "95.2"
+    ]
+  },
+  {
+    "id": "a06",
+    "question": "What total accuracy did Llama-2 7B and Llama-2 70B achieve?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      6
+    ],
+    "answer_all": [
+      "51",
+      "66"
+    ]
+  },
+  {
+    "id": "a07",
+    "question": "How many human-verified synthetic examples do the authors release?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      3,
+      6
+    ],
+    "answer_any": [
+      "525"
+    ]
+  },
+  {
+    "id": "a08",
+    "question": "On what scale did the labelers rate certainty and hardness?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      6
+    ],
+    "answer_any": [
+      "1-5",
+      "1 to 5",
+      "1–5",
+      "five"
+    ]
+  },
+  {
+    "id": "a09",
+    "question": "What accuracy did GPT-4 reach on the PAN 2018 gender task?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      23
+    ],
+    "answer_any": [
+      "90.2"
+    ]
+  },
+  {
+    "id": "a10",
+    "question": "What was the best accuracy of earlier methods on the PAN 2018 task?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      23
+    ],
+    "answer_any": [
+      "82.21"
+    ]
+  },
+  {
+    "id": "a11",
+    "question": "In the simulated chatbot experiment, how many interactions and how many user profiles were used?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      8
+    ],
+    "answer_all": [
+      "224",
+      "20"
+    ]
+  },
+  {
+    "id": "a12",
+    "question": "What top-1 accuracy did the adversarial chatbot achieve in the simulated experiment?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      8
+    ],
+    "answer_any": [
+      "59.2"
+    ]
+  },
+  {
+    "id": "a13",
+    "question": "By how much did anonymization reduce GPT-4's accuracy for hardness level 1?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      9
+    ],
+    "answer_any": [
+      "41.1"
+    ]
+  },
+  {
+    "id": "a14",
+    "question": "Which eight personal attributes does the PersonalReddit dataset cover?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      6
+    ],
+    "answer_all": [
+      "age",
+      "education",
+      "sex",
+      "occupation",
+      "location",
+      "birth",
+      "income"
+    ]
+  },
+  {
+    "id": "a15",
+    "question": "How much cheaper and how much faster is LLM inference compared with human labelers?",
+    "doc_name": "2310.07298v2.pdf",
+    "expected_pages": [
+      1,
+      2,
+      23
+    ],
+    "answer_all": [
+      "100",
+      "240"
+    ]
+  },
+  {
+    "id": "b01",
+    "question": "How many Americans were in the stratified sample used to build the agents?",
+    "doc_name": "2411.10109v3.pdf",
+    "expected_pages": [
+      1,
+      3,
+      4
+    ],
+    "answer_any": [
+      "1,052",
+      "1052"
+    ]
+  },
+  {
+    "id": "b02",
+    "question": "How long were the interviews that the agents were built from?",
+    "doc_name": "2411.10109v3.pdf",
+    "expected_pages": [
+      1,
+      4
+    ],
+    "answer_any": [
+      "two-hour",
+      "two hour",
+      "2-hour",
+      "2 hour"
+    ]
+  },
+  {
+    "id": "b03",
+    "question": "What accuracy, relative to participants' own test-retest consistency, did the combined interview and survey agents reach?",
+    "doc_name": "2411.10109v3.pdf",
+    "expected_pages": [
+      1
+    ],
+    "answer_any": [
+      "86"
+    ]
+  },
+  {
+    "id": "b04",
+    "question": "What accuracy did demographics-only agents reach relative to the test-retest benchmark?",
+    "doc_name": "2411.10109v3.pdf",
+    "expected_pages": [
+      1
+    ],
+    "answer_any": [
+      "74"
+    ]
+  },
+  {
+    "id": "b05",
+    "question": "On how many agents was GPT-4o fine-tuned?",
+    "doc_name": "2411.10109v3.pdf",
+    "expected_pages": [
+      55
+    ],
+    "answer_any": [
+      "500"
+    ]
+  },
+  {
+    "id": "b06",
+    "question": "On how many held-out agents was the fine-tuned model evaluated?",
+    "doc_name": "2411.10109v3.pdf",
+    "expected_pages": [
+      55
+    ],
+    "answer_any": [
+      "552"
+    ]
+  },
+  {
+    "id": "b07",
+    "question": "What normalized accuracy did the fine-tuned GPT-4o model achieve?",
+    "doc_name": "2411.10109v3.pdf",
+    "expected_pages": [
+      55
+    ],
+    "answer_any": [
+      "0.79"
+    ]
+  },
+  {
+    "id": "b08",
+    "question": "What normalized accuracy did the non-fine-tuned model achieve with the same prompting strategy?",
+    "doc_name": "2411.10109v3.pdf",
+    "expected_pages": [
+      55
+    ],
+    "answer_any": [
+      "0.84"
+    ]
+  },
+  {
+    "id": "b09",
+    "question": "How many experiments were used to test whether agents replicate treatment effects?",
+    "doc_name": "2411.10109v3.pdf",
+    "expected_pages": [
+      4,
+      8,
+      12
+    ],
+    "answer_any": [
+      "five",
+      "5"
+    ]
+  },
+  {
+    "id": "b10",
+    "question": "Which interview protocol was used to elicit the interviews?",
+    "doc_name": "2411.10109v3.pdf",
+    "expected_pages": [
+      1,
+      2,
+      3
+    ],
+    "answer_any": [
+      "American Voices Project"
+    ]
+  },
+  {
+    "id": "r01",
+    "question": "Who won the 2018 FIFA World Cup?",
+    "must_refuse": true
+  },
+  {
+    "id": "r02",
+    "question": "What is the boiling point of water at sea level?",
+    "must_refuse": true
+  },
+  {
+    "id": "r03",
+    "question": "Who painted the Mona Lisa?",
+    "must_refuse": true
+  },
+  {
+    "id": "r04",
+    "question": "What is the recommended ibuprofen dose for adults?",
+    "must_refuse": true
+  }
+]

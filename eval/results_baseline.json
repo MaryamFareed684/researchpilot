@@ -1,0 +1,837 @@
+{
+  "label": "baseline",
+  "hit_at_5": 16,
+  "answerable": 25,
+  "retrieval": [
+    {
+      "id": "a01",
+      "hit": true,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          6
+        ],
+        [
+          "2310.07298v2.pdf",
+          23
+        ],
+        [
+          "2310.07298v2.pdf",
+          16
+        ],
+        [
+          "2310.07298v2.pdf",
+          6
+        ],
+        [
+          "2411.10109v3.pdf",
+          10
+        ]
+      ]
+    },
+    {
+      "id": "a02",
+      "hit": true,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          14
+        ],
+        [
+          "2310.07298v2.pdf",
+          16
+        ],
+        [
+          "2310.07298v2.pdf",
+          6
+        ],
+        [
+          "2310.07298v2.pdf",
+          14
+        ],
+        [
+          "2310.07298v2.pdf",
+          6
+        ]
+      ]
+    },
+    {
+      "id": "a03",
+      "hit": true,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          12
+        ],
+        [
+          "2310.07298v2.pdf",
+          13
+        ],
+        [
+          "2310.07298v2.pdf",
+          6
+        ],
+        [
+          "2310.07298v2.pdf",
+          15
+        ],
+        [
+          "2310.07298v2.pdf",
+          20
+        ]
+      ]
+    },
+    {
+      "id": "a04",
+      "hit": true,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          7
+        ],
+        [
+          "2310.07298v2.pdf",
+          23
+        ],
+        [
+          "2310.07298v2.pdf",
+          6
+        ],
+        [
+          "2310.07298v2.pdf",
+          15
+        ],
+        [
+          "2310.07298v2.pdf",
+          8
+        ]
+      ]
+    },
+    {
+      "id": "a05",
+      "hit": false,
+      "got": [
+        [
+          "2411.10109v3.pdf",
+          54
+        ],
+        [
+          "2310.07298v2.pdf",
+          15
+        ],
+        [
+          "2310.07298v2.pdf",
+          7
+        ],
+        [
+          "2411.10109v3.pdf",
+          55
+        ],
+        [
+          "2411.10109v3.pdf",
+          55
+        ]
+      ]
+    },
+    {
+      "id": "a06",
+      "hit": true,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          6
+        ],
+        [
+          "2310.07298v2.pdf",
+          21
+        ],
+        [
+          "2310.07298v2.pdf",
+          7
+        ],
+        [
+          "2411.10109v3.pdf",
+          55
+        ],
+        [
+          "2310.07298v2.pdf",
+          15
+        ]
+      ]
+    },
+    {
+      "id": "a07",
+      "hit": true,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          23
+        ],
+        [
+          "2310.07298v2.pdf",
+          23
+        ],
+        [
+          "2310.07298v2.pdf",
+          6
+        ],
+        [
+          "2411.10109v3.pdf",
+          16
+        ],
+        [
+          "2310.07298v2.pdf",
+          6
+        ]
+      ]
+    },
+    {
+      "id": "a08",
+      "hit": true,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          12
+        ],
+        [
+          "2310.07298v2.pdf",
+          7
+        ],
+        [
+          "2310.07298v2.pdf",
+          13
+        ],
+        [
+          "2310.07298v2.pdf",
+          6
+        ],
+        [
+          "2310.07298v2.pdf",
+          12
+        ]
+      ]
+    },
+    {
+      "id": "a09",
+      "hit": true,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          7
+        ],
+        [
+          "2310.07298v2.pdf",
+          23
+        ],
+        [
+          "2310.07298v2.pdf",
+          23
+        ],
+        [
+          "2411.10109v3.pdf",
+          54
+        ],
+        [
+          "2310.07298v2.pdf",
+          15
+        ]
+      ]
+    },
+    {
+      "id": "a10",
+      "hit": false,
+      "got": [
+        [
+          "2411.10109v3.pdf",
+          55
+        ],
+        [
+          "2310.07298v2.pdf",
+          22
+        ],
+        [
+          "2411.10109v3.pdf",
+          54
+        ],
+        [
+          "2310.07298v2.pdf",
+          19
+        ],
+        [
+          "2411.10109v3.pdf",
+          55
+        ]
+      ]
+    },
+    {
+      "id": "a11",
+      "hit": true,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          8
+        ],
+        [
+          "2310.07298v2.pdf",
+          8
+        ],
+        [
+          "2310.07298v2.pdf",
+          23
+        ],
+        [
+          "2411.10109v3.pdf",
+          20
+        ],
+        [
+          "2411.10109v3.pdf",
+          4
+        ]
+      ]
+    },
+    {
+      "id": "a12",
+      "hit": true,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          8
+        ],
+        [
+          "2310.07298v2.pdf",
+          23
+        ],
+        [
+          "2310.07298v2.pdf",
+          8
+        ],
+        [
+          "2310.07298v2.pdf",
+          5
+        ],
+        [
+          "2310.07298v2.pdf",
+          9
+        ]
+      ]
+    },
+    {
+      "id": "a13",
+      "hit": true,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          8
+        ],
+        [
+          "2310.07298v2.pdf",
+          9
+        ],
+        [
+          "2310.07298v2.pdf",
+          7
+        ],
+        [
+          "2310.07298v2.pdf",
+          23
+        ],
+        [
+          "2310.07298v2.pdf",
+          9
+        ]
+      ]
+    },
+    {
+      "id": "a14",
+      "hit": true,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          6
+        ],
+        [
+          "2310.07298v2.pdf",
+          6
+        ],
+        [
+          "2310.07298v2.pdf",
+          6
+        ],
+        [
+          "2310.07298v2.pdf",
+          16
+        ],
+        [
+          "2310.07298v2.pdf",
+          31
+        ]
+      ]
+    },
+    {
+      "id": "a15",
+      "hit": false,
+      "got": [
+        [
+          "2310.07298v2.pdf",
+          6
+        ],
+        [
+          "2310.07298v2.pdf",
+          24
+        ],
+        [
+          "2310.07298v2.pdf",
+          5
+        ],
+        [
+          "2310.07298v2.pdf",
+          3
+        ],
+        [
+          "2310.07298v2.pdf",
+          6
+        ]
+      ]
+    },
+    {
+      "id": "b01",
+      "hit": false,
+      "got": [
+        [
+          "2411.10109v3.pdf",
+          21
+        ],
+        [
+          "2411.10109v3.pdf",
+          11
+        ],
+        [
+          "2411.10109v3.pdf",
+          20
+        ],
+        [
+          "2411.10109v3.pdf",
+          58
+        ],
+        [
+          "2411.10109v3.pdf",
+          24
+        ]
+      ]
+    },
+    {
+      "id": "b02",
+      "hit": false,
+      "got": [
+        [
+          "2411.10109v3.pdf",
+          23
+        ],
+        [
+          "2411.10109v3.pdf",
+          27
+        ],
+        [
+          "2411.10109v3.pdf",
+          28
+        ],
+        [
+          "2411.10109v3.pdf",
+          26
+        ],
+        [
+          "2411.10109v3.pdf",
+          27
+        ]
+      ]
+    },
+    {
+      "id": "b03",
+      "hit": false,
+      "got": [
+        [
+          "2411.10109v3.pdf",
+          6
+        ],
+        [
+          "2411.10109v3.pdf",
+          2
+        ],
+        [
+          "2411.10109v3.pdf",
+          4
+        ],
+        [
+          "2411.10109v3.pdf",
+          53
+        ],
+        [
+          "2411.10109v3.pdf",
+          11
+        ]
+      ]
+    },
+    {
+      "id": "b04",
+      "hit": false,
+      "got": [
+        [
+          "2411.10109v3.pdf",
+          2
+        ],
+        [
+          "2411.10109v3.pdf",
+          42
+        ],
+        [
+          "2411.10109v3.pdf",
+          10
+        ],
+        [
+          "2411.10109v3.pdf",
+          10
+        ],
+        [
+          "2411.10109v3.pdf",
+          11
+        ]
+      ]
+    },
+    {
+      "id": "b05",
+      "hit": true,
+      "got": [
+        [
+          "2411.10109v3.pdf",
+          54
+        ],
+        [
+          "2411.10109v3.pdf",
+          55
+        ],
+        [
+          "2411.10109v3.pdf",
+          55
+        ],
+        [
+          "2411.10109v3.pdf",
+          54
+        ],
+        [
+          "2411.10109v3.pdf",
+          54
+        ]
+      ]
+    },
+    {
+      "id": "b06",
+      "hit": true,
+      "got": [
+        [
+          "2411.10109v3.pdf",
+          39
+        ],
+        [
+          "2411.10109v3.pdf",
+          55
+        ],
+        [
+          "2411.10109v3.pdf",
+          58
+        ],
+        [
+          "2411.10109v3.pdf",
+          55
+        ],
+        [
+          "2411.10109v3.pdf",
+          43
+        ]
+      ]
+    },
+    {
+      "id": "b07",
+      "hit": true,
+      "got": [
+        [
+          "2411.10109v3.pdf",
+          55
+        ],
+        [
+          "2411.10109v3.pdf",
+          54
+        ],
+        [
+          "2411.10109v3.pdf",
+          54
+        ],
+        [
+          "2411.10109v3.pdf",
+          55
+        ],
+        [
+          "2411.10109v3.pdf",
+          55
+        ]
+      ]
+    },
+    {
+      "id": "b08",
+      "hit": true,
+      "got": [
+        [
+          "2411.10109v3.pdf",
+          55
+        ],
+        [
+          "2411.10109v3.pdf",
+          55
+        ],
+        [
+          "2411.10109v3.pdf",
+          38
+        ],
+        [
+          "2411.10109v3.pdf",
+          36
+        ],
+        [
+          "2411.10109v3.pdf",
+          55
+        ]
+      ]
+    },
+    {
+      "id": "b09",
+      "hit": false,
+      "got": [
+        [
+          "2411.10109v3.pdf",
+          34
+        ],
+        [
+          "2411.10109v3.pdf",
+          38
+        ],
+        [
+          "2411.10109v3.pdf",
+          39
+        ],
+        [
+          "2411.10109v3.pdf",
+          34
+        ],
+        [
+          "2411.10109v3.pdf",
+          34
+        ]
+      ]
+    },
+    {
+      "id": "b10",
+      "hit": false,
+      "got": [
+        [
+          "2411.10109v3.pdf",
+          26
+        ],
+        [
+          "2411.10109v3.pdf",
+          25
+        ],
+        [
+          "2411.10109v3.pdf",
+          53
+        ],
+        [
+          "2411.10109v3.pdf",
+          48
+        ],
+        [
+          "2411.10109v3.pdf",
+          24
+        ]
+      ]
+    }
+  ],
+  "answer_correct": 21,
+  "refusals_ok": 4,
+  "refuse_total": 4,
+  "false_confidence": 1,
+  "answers": [
+    {
+      "id": "a01",
+      "status": "answered",
+      "good": true,
+      "answer": "The main experiment evaluated 9 state‑of‑the‑art LLMs on the PersonalReddit dataset. [1]"
+    },
+    {
+      "id": "a02",
+      "status": "answered",
+      "good": true,
+      "answer": "The PersonalReddit dataset contains 520 user profiles. [3]"
+    },
+    {
+      "id": "a03",
+      "status": "answered",
+      "good": true,
+      "answer": "After restricting to only those labels with a certainty rating of at least 3, 1,066 individual labels remain. [1]"
+    },
+    {
+      "id": "a04",
+      "status": "answered",
+      "good": true,
+      "answer": "GPT‑4 achieved a top‑1 accuracy of 85.5 % across attributes on the PersonalReddit dataset. [1][3]"
+    },
+    {
+      "id": "a05",
+      "status": "answered",
+      "good": true,
+      "answer": "GPT‑4 reached a top‑3 accuracy of 95.2 %[5]"
+    },
+    {
+      "id": "a06",
+      "status": "answered",
+      "good": true,
+      "answer": "Llama‑2 7B achieved a total accuracy of 51%, while Llama‑2 70B achieved 66%[1]"
+    },
+    {
+      "id": "a07",
+      "status": "answered",
+      "good": true,
+      "answer": "The authors release 525 human‑verified synthetic examples. [2][3]"
+    },
+    {
+      "id": "a08",
+      "status": "answered",
+      "good": false,
+      "answer": "The labelers used a 1‑to‑5 scale for both certainty and hardness, where 1 indicated very low and 5 indicated very high [1][4]."
+    },
+    {
+      "id": "a09",
+      "status": "answered",
+      "good": true,
+      "answer": "GPT‑4 achieved an overall accuracy of 90.2 % on the PAN 2018 gender profiling task. [2]"
+    },
+    {
+      "id": "a10",
+      "status": "no_evidence",
+      "good": false,
+      "answer": "The uploaded sources do not contain enough evidence to answer this question."
+    },
+    {
+      "id": "a11",
+      "status": "answered",
+      "good": true,
+      "answer": "The simulated experiment ran 224 interactions across 20 different user profiles. [2]"
+    },
+    {
+      "id": "a12",
+      "status": "answered",
+      "good": true,
+      "answer": "The adversarial chatbot achieved a top‑1 accuracy of 59.2 % in the simulated experiment. [3]"
+    },
+    {
+      "id": "a13",
+      "status": "answered",
+      "good": true,
+      "answer": "Anonymization reduced GPT‑4’s accuracy for hardness level 1 by about 41.1 %[2]"
+    },
+    {
+      "id": "a14",
+      "status": "answered",
+      "good": true,
+      "answer": "The PersonalReddit dataset covers eight personal attribute categories: age (AGE), education (SCH), sex (SEX), occupation (OCC), relationship state (MAR), location (LOC), place of birth (POB), and income (INC)[2]."
+    },
+    {
+      "id": "a15",
+      "status": "partially_cited",
+      "good": true,
+      "answer": "LLM inference is dramatically cheaper and faster than human labeling.  \nHuman labeling required about 112 man‑hours, which at a standard rate of 20 USD per hour amounts to roughly 2 240 USD. In contrast, GPT‑4 inference took only about 22–25 minutes (≈0.4 hours) and cost roughly 2 250 USD, which is about 100 × cheaper than the human cost and about 280 × faster than the human effort [1][2]."
+    },
+    {
+      "id": "b01",
+      "status": "answered",
+      "good": true,
+      "answer": "The stratified sample used to build the agents consisted of 1,052 Americans. [1]"
+    },
+    {
+      "id": "b02",
+      "status": "answered",
+      "good": true,
+      "answer": "The interviews that the AI interviewer agent was built from were designed to last up to about two hours, with each question’s time limit set so the entire interview could conclude within that duration. [4]"
+    },
+    {
+      "id": "b03",
+      "status": "answered",
+      "good": true,
+      "answer": "The combined interview‑and‑survey agents achieved a normalized accuracy of 0.86, meaning they matched about 86 % of the participants’ own test‑retest consistency. [1]"
+    },
+    {
+      "id": "b04",
+      "status": "no_evidence",
+      "good": false,
+      "answer": "The uploaded sources do not contain enough evidence to answer this question."
+    },
+    {
+      "id": "b05",
+      "status": "answered",
+      "good": true,
+      "answer": "GPT‑4o was fine‑tuned on 500 agents. [2][3]"
+    },
+    {
+      "id": "b06",
+      "status": "answered",
+      "good": true,
+      "answer": "The fine‑tuned model was evaluated on 552 held‑out agents. [2]"
+    },
+    {
+      "id": "b07",
+      "status": "answered",
+      "good": true,
+      "answer": "The fine‑tuned GPT‑4o model achieved a normalized accuracy of 0.79[1]."
+    },
+    {
+      "id": "b08",
+      "status": "answered",
+      "good": true,
+      "answer": "The non‑fine‑tuned model achieved a normalized accuracy of 0.84. [2]"
+    },
+    {
+      "id": "b09",
+      "status": "answered",
+      "good": true,
+      "answer": "Five experiments were used to test whether the generative agents replicate treatment effects. [2][3]"
+    },
+    {
+      "id": "b10",
+      "status": "no_evidence",
+      "good": false,
+      "answer": "The uploaded sources do not contain enough evidence to answer this question."
+    },
+    {
+      "id": "r01",
+      "status": "no_evidence",
+      "good": true,
+      "answer": "The uploaded sources do not contain enough evidence to answer this question."
+    },
+    {
+      "id": "r02",
+      "status": "no_evidence",
+      "good": true,
+      "answer": "The uploaded sources do not contain enough evidence to answer this question."
+    },
+    {
+      "id": "r03",
+      "status": "no_evidence",
+      "good": true,
+      "answer": "The uploaded sources do not contain enough evidence to answer this question."
+    },
+    {
+      "id": "r04",
+      "status": "no_evidence",
+      "good": true,
+      "answer": "The uploaded sources do not contain enough evidence to answer this question."
+    }
+  ]
+}

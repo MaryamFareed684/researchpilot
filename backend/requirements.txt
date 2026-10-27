@@ -5,3 +5,7 @@ python-multipart
 python-dotenv
 pytest
 httpx
+groq
+sentence-transformers
+qdrant-client
+langchain-text-splitters
