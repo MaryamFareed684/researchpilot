@@ -1,7 +1,7 @@
 import math
 import re
+from app import config, embeddings, hybrid, llm, rerank, vector_store
 
-from app import embeddings, hybrid, llm, vector_store
 from app.config import CONTEXT_CHUNKS, SEARCH_MODE
 
 
@@ -53,11 +53,19 @@ def find_uncited_sentences(answer: str) -> list[str]:
 
 
 def retrieve(question: str, query_vector: list[float], top_k: int, doc_ids: list[str] | None = None) -> list[dict]:
-    """One place that decides how we search: SEARCH_MODE=vector or hybrid."""
-    if SEARCH_MODE == "hybrid":
-        return hybrid.search(question, query_vector, top_k=top_k, doc_ids=doc_ids)
-    return vector_store.search(query_vector, top_k=top_k, doc_ids=doc_ids)
+    """One place that decides how we search.
 
+    SEARCH_MODE picks vector or hybrid candidates; RERANK then re-orders a wider pool and keeps the best top_k.
+    """
+    use_rerank = config.RERANK and bool(question)
+    pool = config.RERANK_CANDIDATES if use_rerank else top_k
+    if config.SEARCH_MODE == "hybrid":
+        hits = hybrid.search(question, query_vector, top_k=pool, doc_ids=doc_ids)
+    else:
+        hits = vector_store.search(query_vector, top_k=pool, doc_ids=doc_ids)
+    if use_rerank:
+        hits = rerank.rerank(question, hits, top_k)
+    return hits[:top_k]
 
 def retrieve_per_document(query_vector: list[float], doc_ids: list[str], per_doc_k: int,
                           question: str = "") -> list[dict]:

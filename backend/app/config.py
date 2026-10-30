@@ -26,6 +26,9 @@ MIN_CHUNK_CHARS = 40
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
 SEARCH_MODE = os.getenv("SEARCH_MODE", "hybrid")  # "vector" or "hybrid"
+RERANK = os.getenv("RERANK", "1") == "1"      # "0" turns the reranker off
+RERANK_MODEL = os.getenv("RERANK_MODEL", "cross-encoder/ms-marco-MiniLM-L-6-v2")
+RERANK_CANDIDATES = 20   # how many chunks the reranker looks at before keeping the best few
 CONTEXT_CHUNKS = 5        # how many chunks we give the LLM
 MAX_ANSWER_TOKENS = 1500  # limit the answer length
 LLM_TEMPERATURE = 0.1     # low = factual, not creative

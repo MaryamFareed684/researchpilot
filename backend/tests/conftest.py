@@ -3,6 +3,7 @@ import tempfile
 import zlib
 
 # Must be set BEFORE the app is imported: use an in-memory Qdrant for tests
+os.environ["RERANK"] = "0"  # tests never load the real reranker model
 os.environ["QDRANT_PATH"] = ":memory:"
 os.environ["DB_PATH"] = os.path.join(tempfile.mkdtemp(), "test.db")
 
