@@ -324,5 +324,9 @@
     "id": "r04",
     "question": "What is the recommended ibuprofen dose for adults?",
     "must_refuse": true
-  }
+  },
+
+    {"id": "r05", "question": "What accuracy did Claude 3 achieve on the PersonalReddit dataset?", "must_refuse": true},
+  {"id": "r06", "question": "What accuracy did GPT-4 reach on the PAN 2018 age attribute?", "must_refuse": true},
+  {"id": "r07", "question": "What accuracy did Mistral 7B agents reach on the General Social Survey?", "must_refuse": true}
 ]
