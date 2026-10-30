@@ -24,8 +24,11 @@ def call(path, payload=None):
         return json.loads(resp.read())
 
 
+DASHES = {ord(c): " " for c in "-\u2010\u2011\u2012\u2013\u2014"}  # every kind of dash becomes a space
+
+
 def norm(text):
-    return " ".join(text.lower().split())
+    return " ".join(text.translate(DASHES).lower().split())
 
 
 def answer_correct(case, answer):
