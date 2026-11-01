@@ -8,12 +8,13 @@ Needs the backend running on http://127.0.0.1:8000 with both papers uploaded.
 """
 import argparse
 import json
+import os
 import time
 import urllib.error
 import urllib.request
 from pathlib import Path
 
-API = "http://127.0.0.1:8000"
+API = os.getenv("API_URL", "http://127.0.0.1:8000")
 HERE = Path(__file__).parent
 
 

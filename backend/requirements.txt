@@ -3,9 +3,10 @@ uvicorn[standard]
 pymupdf
 python-multipart
 python-dotenv
-pytest
 httpx
 groq
-sentence-transformers
+numpy
+fastembed
 qdrant-client
 langchain-text-splitters
+rank-bm25
